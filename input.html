@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Input Types</title>
+	</head>
+	<body>
+	
+	<form>
+	<table>
+		<tr>
+			<th>Billing Name:</th>
+			<td><input type="text" id="name" size="42" title="Alphabets only" autofocus required></td>
+		<tr/>
+		<tr>
+			<th >Card Details </th>
+			<td>
+			<table>
+				<tr>
+					<th>Card Number:</th>
+					<td> <input type ="text" required pattern="[0-9]{16}" title="enter the 16 digit number correctly" placeholder="XXXX-XXXX-XXXX-XXXX" id="card"></td>
+				</tr>
+				<tr>
+					<th>CVV:</th>
+					<td><input type = "text" required pattern="[0-9]{3}"></td>
+				</tr>
+				<tr>
+					<th>Month / Year </th>
+					<td><input type ="text" required pattern="[0-1][1-9]" placeholder="MM" > / <input type ="text" required pattern="[1-2][0,9][0-9][0-9]" placeholder ="YYYY"></td>
+				</tr>
+			</table>
+			</td>
+		<tr/>
+		
+		<tr>
+			<tr>
+				<th>Contact Information :</th>
+				<td style="font-weight:bold">
+					<table>
+						
+						<tr>
+							<th>e-mail: </th>
+							<td><input type="email" id="email" size="30"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+		<tr/>
+		<tr>
+			<td><input type="submit" id="name" value="Add Address" size="30" ></td>
+		<tr/>
+	</table>
+	</form>
+</body>
+</html>

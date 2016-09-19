@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>
+Objects
+</title>
+</head>
+<body>
+
+<h1> objects </h1>
+<p><i> university details</i> </p>
+<p id="uni"></p>
+<script>
+
+var university = { 
+  name : "San jose state university",
+  address : "one washington sqaure, san jose",
+  state : "california ",
+  summary : function(){
+  return university.name +  "<br>" + university.address +  "<br>" + university.state ;
+  }
+  };
+
+  document.getElementById("uni").innerHTML = university.summary();
+
+
+</script>
+
+</body>
+</html>

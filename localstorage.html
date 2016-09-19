@@ -1,0 +1,29 @@
+<html>
+<head>
+<body>
+<button onclick="increasecount()" type="button">Lets increase the count</button>
+<p id ="out"></p>
+<p id ="out1"></p>
+
+</body>
+<script>
+function increasecount() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+			
+        } else {
+            localStorage.clickcount = 1;
+			
+        }
+        document.getElementById("out").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+		
+    } else {
+        document.getElementById("out").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+</head>
+
+</html>
+

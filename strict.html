@@ -1,0 +1,29 @@
+ <html>
+ <head>
+ 
+ </html>
+ <body>
+ <p id="out"></p>
+
+<script>
+"use strict";
+function individual(f1,f1 , age, favcolor) {
+    this.firstName = f1;
+    this.lastName = f1;
+    this.age = age;
+    this.favColor = favcolor;
+}
+
+var myfriend = new individual("balaji", "gupta", 27, "green");
+
+
+myfriend.name = function() {
+    return this.firstName + " " + this.lastName;
+};
+
+document.getElementById("out").innerHTML ="My friend is " + myfriend.name();
+</script>
+
+ 
+ </body>
+ </html>

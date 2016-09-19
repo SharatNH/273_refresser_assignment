@@ -1,0 +1,54 @@
+<html>
+<head>
+
+</head>
+<body>
+<h1 style = "color : grey"><i>Hike Rate Calculator</i></h1>  
+<form>
+<pre>
+Enter the salary :                <input type = "text" id = "sal" >  </br>
+Enter the years of experience :   <input type = "text" id = "exp"> </br>
+</pre>
+<input type="button" value ="Submit" onclick = "hikecal()">
+
+
+
+<p id="check"><b></p>
+
+
+<script>
+
+function hikecal()
+{
+var salary = document.getElementById("sal").value;
+var exp = document.getElementById("exp").value;
+var hike = 10;
+
+var temp = salary;
+
+if ( exp <5 )
+{
+  hike = 10;
+  salary  = (salary * hike)/100;
+}
+else if (exp <10)
+{
+ hike = 20;
+salary = (salary * hike)/100;
+ }
+else
+{
+ hike = 30;
+ salary  = (salary * hike)/100;
+}
+
+salary = +temp + +salary;
+
+document.getElementById("check").innerHTML = " The hike rate is " + hike + " % based on exp and effective salary would be " + salary ;
+
+}
+</script>
+
+
+
+</body>

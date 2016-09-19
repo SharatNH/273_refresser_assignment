@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Arrays</title>
+</head>
+<body>
+
+<p> <pre>Courses current semester
+1. Virtulisation
+2. Enterprise Distributed System
+3. Software Testing</pre>
+<p><pre>
+Course :<input type="number" id="id"> 
+</pre></p>
+<input type="submit" onclick="myfunction()">
+<p id="trail"></p>
+<p id="trail2"></p>
+<p id="trail3"></p>
+
+
+<script>
+function myfunction()
+{
+var num=document.getElementById("id").value;
+num=num-1;
+
+
+
+var course = ["virtualisation", "enterprise distributed system", "software testing"];
+var elective = course[2];
+var no_of_courses = course.length;
+
+var type = typeof(course);
+var istrue = Array.isArray(course);
+
+var interest= course[num];
+document.getElementById("trail3").innerHTML ="You have shown interest in my :"+ interest;
+document.getElementById("trail").innerHTML = "In the current semester I have opted for " + no_of_courses + " and have taken up " + elective + " as my elective";
+document.getElementById("trail2").innerHTML = " The typeof returns the arrays as " + type + " because the javascript considers every arrays as object. Hence Array.isArray is used to determine if its array and the result is :" + istrue; 
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+<p id="output"></p>
+
+ <input type="submit" value ="try replacing" onclick="expression()">
+<script>
+
+ var desc="Sharat Hegde studies in sjsu";
+ 
+document.getElementById("output").innerHTML= "before replacement :"+ desc;
+ 
+ function expression()
+ {
+ 
+ 
+ var change = desc.replace(/sjsu/i,"san jose state university");
+ 
+ document.getElementById("output").innerHTML= "after replacement  :"+ change	;
+ 
+ }
+ 
+
+</script>
+</body>
+</html>

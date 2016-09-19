@@ -1,0 +1,37 @@
+<html>
+<body>
+
+
+<p id="01"></p> 
+<p id ="02"></p>
+<script>
+
+var company = [
+
+{"firstname":"Balaji","lastname":"Anoop","dept":"testing"},
+{"firstname":"Tej","lastname":"Kamaal","dept":"embedded"}
+
+
+];
+
+
+//conversion of jason text to javascript object
+var json_text = '{"company" : ['+
+'{"firstname":"Balaji","lastname":"Anoop","dept":"testing"},'+
+'{"firstname":"Tej","lastname":"Kamaal","dept":"embedded"}]}';
+
+
+
+var js_obj= JSON.parse(json_text);
+
+document.getElementById("01").innerHTML = company[0].firstname + " " + company[0].lastname + " works in " + company[0].dept;
+
+document.getElementById("02").innerHTML = js_obj.company[1].firstname + " " + js_obj.company[1].lastname + " works in " + js_obj.company[1].dept;
+
+
+
+</script>
+
+</body>
+
+</html>

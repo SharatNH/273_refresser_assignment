@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> Trying Errors !!! </title>
+</head>
+
+<body>
+<p><pre>
+
+Enter the GPA : <input type ="text" id ="gpa" > </br>
+
+<input type = "Submit" value =" Check Elgibility" onclick = "myfunction()"> </br>
+</pre>
+</p>
+<p id ="out"> </p>
+<p id ="out1"> </p>
+
+<script>
+
+function myfunction()
+{
+ var num = document.getElementById("gpa").value;
+ try{
+ 
+ if ( num < 1) throw "not a valid gpa" ;
+ else if (isNaN(num)) throw " enter a valid gpa";
+ 
+ else if ( num < 3.5)
+ {
+  throw "too less to apply";
+ }
+ else 
+ {
+ throw " you r eligible";
+ }
+ }
+ catch (err)
+ {
+   document.getElementById("out").innerHTML = "the result is : " + err;
+ }
+ finally
+ {
+  document.getElementById("out1").innerHTML = " Calculation done !!";
+ }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+
+</head>
+<body>
+
+
+<p> </p>
+Name given in the Card : <input type="text" id="fullname" required> <br>
+
+
+Card Number            : <input type ="text" required pattern="[0-9]{16}" autofocus title="enter the 16 digit number correctly" placeholder="XXXX-XXXX-XXXX-XXXX" id="card">
+
+
+
+CVV					   : <input type = "text" required pattern="[0-9]{3}" autofocus required> </br>
+
+
+
+Month : <input type ="text" required pattern="[0-1][1-9]" placeholder="MM" required>    Year : <input type ="text" required pattern="[1-2][0,9][0-9][0-9]" placeholder ="YYYY" autofocus>
+
+
+
+<input type="submit" onclick="myfunction()">
+
+
+<p>
+
+
+<script>
+function myfunction()
+{
+var fn = document.getElementById("fullname").value;
+
+document.getElementById("out").innerHTML="Your card has been processed. Thanks for with us :" + fn ;
+
+
+}
+
+
+</script>
+<p out="out"></p>
+</body>
+</html>

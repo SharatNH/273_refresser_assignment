@@ -1,0 +1,30 @@
+ <html>
+ <head>
+ 
+ </html>
+ <body>
+ <p id="out"></p>
+
+<script>
+
+function individual(first, last, age, favcolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.favColor = favcolor;
+}
+
+var myfriend = new individual("Balaji", "Gupta", 27, "green");
+myfriend.nationality="Indian";
+
+
+myfriend.name = function() {
+    return this.firstName + "  " + this.lastName;
+};
+
+document.getElementById("out").innerHTML ="My friend is " + myfriend.name()+ " and his nationality is : "+ myfriend.nationality;
+</script>
+
+ 
+ </body>
+ </html>

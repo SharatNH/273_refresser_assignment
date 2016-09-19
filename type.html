@@ -1,0 +1,35 @@
+ <html>
+ <head>
+ 
+ </html>
+ <body>
+ <p id="out"></p>
+  <p id="out1"></p>
+ <p id="out2"></p>
+
+
+<script>
+
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth();
+var year = date.getFullYear();
+
+
+
+
+document.getElementById("out").innerHTML ="Todays Date is : " + month + "/" + day + "/" + year;
+
+var number = 99.978;
+var number1 = 	7.656;
+
+document.getElementById("out1").innerHTML = " Precision of 99.978 to 2 decimal places :" + number.toPrecision(3);
+document.getElementById("out2").innerHTML = " Precision of 7.656 to 1 decimal places : " + number1.toPrecision(2);
+
+
+</script>
+
+ 
+ </body>
+ </html>
