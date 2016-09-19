@@ -1,0 +1,5 @@
+package demo;
+
+public interface Cartax {
+	public double nettax(double mrp,double tax,double cc); 
+}

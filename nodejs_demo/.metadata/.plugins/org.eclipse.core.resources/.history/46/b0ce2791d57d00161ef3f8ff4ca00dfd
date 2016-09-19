@@ -1,0 +1,9 @@
+package demo.interfaces.demo1;
+
+public class taxcompute {
+
+	public taxcompute() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

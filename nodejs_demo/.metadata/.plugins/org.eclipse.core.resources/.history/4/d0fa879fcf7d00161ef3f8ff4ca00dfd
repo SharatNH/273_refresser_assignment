@@ -1,0 +1,109 @@
+package demo;
+
+public class QueueDemo {
+
+
+	/* drivethrough at fast food */
+	
+		int size=10;
+		int[] customers = new int [size];
+		int front=-1;
+		int rear=-1;
+		
+		public boolean addtoQ(int cust)
+		{
+			System.out.println();
+			if((rear+1)% size == front)
+			{
+				System.out.println("Queue is FULL ! Cannot add any more customers");
+				return false;
+			}
+			else
+			{
+				rear=(rear+1)%size;
+				customers[rear]=cust;
+				if(front==-1)
+					front++;
+				
+				System.out.println("Customer" + cust +" has joined the takeaway queue !");
+				displayQ();
+				return true;
+			}
+		}
+		public boolean isEmpty()
+		{
+			if((front==-1) && (rear==-1))
+			{
+				System.out.println("Queue is EMPTY ! No customer to service");
+				return false;
+			}
+			
+			return true;
+		}
+		public boolean deQ()
+		{
+			if((front==-1) && (rear==-1))
+			{
+				System.out.println("Queue is EMPTY ! No customer to service");
+				return false;
+			}
+			else if(front == rear)
+			{
+				System.out.println("Customer" + customers[front]+ " has finished his billing !"+"\n");
+				front = rear = -1;
+				displayQ();
+				return true;
+			}
+			else
+			{
+				System.out.println("Customer" + customers[front]+ " has finished his billing !"+"\n");
+				front=(front+1)%size;
+				displayQ();
+				return true;
+			}
+		}
+		public void displayQ()
+		{
+			int i=0;
+			System.out.print("The billing queue has the following customers: ");
+			if((front == -1) && (rear==-1))
+					System.out.println("Queue is EMPTY ! No customer to service");
+			else if(front<=rear)
+			{
+				for(i=front;i<=rear;i++)
+					System.out.print("Customer"+customers[i]+"\t");
+			}
+			else
+			{
+				for(i= front; i<size; i++)
+				{
+					System.out.print("Customer"+customers[i]+"\t");
+				}
+				for(i=0; i<=rear; i++)
+				{
+					System.out.println("Customer"+customers[i]+"\t");
+				}
+			}
+			System.out.println();
+		}
+		public static void main(String[] args) 
+		{
+			QueueDemo mcd = new QueueDemo();
+			mcd.deQ();
+			mcd.addtoQ(1);
+			mcd.addtoQ(2);
+			
+			mcd.deQ();
+			
+			mcd.addtoQ(3);
+			mcd.addtoQ(4);
+			mcd.addtoQ(5);
+			
+			mcd.deQ();
+			mcd.deQ();
+			mcd.deQ();
+		}
+	};
+
+
+

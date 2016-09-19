@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>
+Variables
+</title>
+<body>
+<p> here i shall demonstarte the use of variables </p>
+
+
+<p><pre>
+
+Name: <input type="text" id="name"></br>
+
+Height :<input type="text" id="feet" placeholder="foot">  <input type="text" id="inche" placeholder="inches"> 
+
+</p></pre>
+<input type="submit" onclick="myFunction()">
+
+
+<script>
+function myFunction()
+{  
+var name = document.getElementById("name").value;
+var feet = document.getElementById("feet").value;
+var inches = document.getElementById("inche").value;
+
+document.getElementById("out").innerHTML="My name is : " + name;
+document.getElementById("out1").innerHTML="My height is: "+ feet + "." + inches;
+}
+
+
+
+
+
+</script>
+<p id="out"></p>
+<p id="out1"></p>
+</body>
+</html>

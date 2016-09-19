@@ -1,0 +1,36 @@
+package demo;
+
+class GenericDemo<T> {
+	  T ob;
+
+	  GenericDemo(T o) {
+	    ob = o;
+	  }
+
+	  T getob() {
+	    return ob;
+	  }
+
+	  void showType() {
+	    System.out.println("Type of T is " + ob.getClass().getName());
+	  }
+	}
+
+	public class genericDemo {
+	  public static void main(String args[]) {
+	    // Create a Gen reference for Integers.
+		  GenericDemo<Integer> integer = new GenericDemo<Integer>(88);
+	    integer.showType();
+
+	    // no cast is needed.
+	    int num = integer.getob();
+	    System.out.println("value: " + num);
+
+	    // Create a Gen object for Strings.
+	    GenericDemo<String> string = new GenericDemo<String>("Generics Test");
+	    string.showType();
+
+	    String str = string.getob();
+	    System.out.println("value: " + str);
+	  }
+	}

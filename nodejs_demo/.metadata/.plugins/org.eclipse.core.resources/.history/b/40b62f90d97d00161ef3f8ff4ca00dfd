@@ -1,0 +1,9 @@
+package demo;
+
+public class DemoStack {
+
+	public DemoStack() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

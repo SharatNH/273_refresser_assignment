@@ -1,0 +1,36 @@
+package demo;
+
+public class ArrayDemo {
+    public static void main(String[] args ) {
+        int[] nums = {3,2,4};
+        int target = 6;
+    	int i , j ;
+        int total =0 ;
+        //int k = 0;
+        //int n = 0;
+        int [] n = new int[2];
+        
+       int  count = nums.length;
+        for ( i=0; i < count -1; i++ )
+          {
+              for ( j=i + 1 ; j< count ; j++)
+              {
+                  total = (nums[i] + nums[j]);
+                  System.out.print(total);
+                  if ( total == target)
+                  {
+                   
+                     System.out.print(i);
+                     System.out.print(j);
+                     
+                     
+                  }
+                 
+                  
+                 
+              }
+             
+          }
+        
+    }
+}

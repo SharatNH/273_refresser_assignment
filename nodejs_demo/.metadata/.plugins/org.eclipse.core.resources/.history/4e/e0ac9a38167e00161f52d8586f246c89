@@ -1,0 +1,60 @@
+package demo;
+
+import java.util.Scanner;
+
+public class ArrayDemo {
+    public static void main(String[] args ) {
+        int[] nums = new int[5];
+        int target =0;
+    	int i , j ;
+        int total =0 ;
+        int size=5;
+        int trigger =0;
+        
+        //int k = 0;
+        //int n = 0;
+        
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the variables for array of size 4");
+        for(i=0;i<size-1;i++)
+        {
+        
+        	int temp = input.nextInt();
+        	nums[i]=temp;
+        }
+        
+        System.out.println("Enter the target value : ");
+        target = input.nextInt();
+        
+       int  count = nums.length; //just to show the array function array.length
+        for ( i=0; i < count -1; i++ )
+          {
+              for ( j=i + 1 ; j< count ; j++)
+              {
+                  total = (nums[i] + nums[j]);
+                  //System.out.print(total);
+                  if ( total == target)
+                  {
+                     System.out.println();
+                     System.out.println("The position of numbers for the total");
+                     System.out.print( i+1 );
+                     System.out.print(" and ");
+                     System.out.print( j+1 );
+                     trigger =1;
+                     
+                  }
+                  
+                 
+                  
+                 
+              }
+             
+          }
+        if(target==0)
+        {
+        	System.out.println("No such combination gives the result");
+        }
+        
+    }
+}

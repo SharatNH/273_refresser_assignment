@@ -1,0 +1,77 @@
+package demo;
+
+import java.util.Stack;
+
+public class DemoStack {
+
+	
+		private int MAX_SIZE = 3;
+		int[] box = new int[MAX_SIZE];
+		int top=-1;
+		
+		public boolean push(int item)
+		{
+			System.out.println();
+			if(top == MAX_SIZE-1)
+			{
+				System.out.println("Box is FULL ! Cannot add any more coins");
+				return false;
+			}
+			else
+			{
+				box[++top]=item;
+				System.out.println("Coin"+item+" has been inserted into the box !");
+				showCoins();
+				return true;
+			}
+		}
+		public boolean pop()
+		{
+			if(top == -1)
+			{
+				System.out.println("Box is EMPTY ! No coins to be taken out");
+				return false;
+			}
+			else
+			{
+				System.out.println("Coin" + box[top--] + " has been taken out");
+				showCoins();
+				return true;
+			}
+		}
+		
+		public void showCoins()
+		{
+			System.out.println();
+			if(top == -1)
+			{
+				System.out.println("Box is EMPTY ! No coins to show");
+			}
+			else
+			{
+				System.out.print("Coins remaining in Box are:" +"\t");
+				for(int i = top; i>=0; i--)
+				{
+					System.out.print("Coin" + box[i]+"\t");
+				}
+			}
+		}
+		
+		@SuppressWarnings("unchecked")
+		public void main(String[] args) 
+		{
+			Stack piggybank = new Stack();
+			piggybank.pop();
+			piggybank.push(1);
+			piggybank.push(2);
+			piggybank.push(3);
+			piggybank.push(4);
+			piggybank.pop();
+			piggybank.pop();
+			piggybank.pop();
+			piggybank.pop();
+			piggybank.push(5);
+			piggybank.pop();
+		}
+	}
+

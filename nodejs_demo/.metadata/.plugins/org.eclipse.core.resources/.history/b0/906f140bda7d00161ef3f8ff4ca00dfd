@@ -1,0 +1,77 @@
+package demo;
+	
+import java.util.Stack;
+	
+	public class StacksDemo {
+	
+			int size = 7;
+			String[] box = new String[size];
+			int top=-1;
+			
+			public boolean push(String color)
+			{
+				System.out.println();
+				if(top == size-1)
+				{
+					System.out.println("Packet is FULL ! Cannot add any more popins");
+					return false;
+				}
+				else
+				{
+					box[++top]=color;
+					System.out.println(" sugar coated chocolate of color "+color+" has been inserted into the box !");
+					show();
+					return true;
+				}
+			}
+			public boolean pop()
+			{
+				if(top == -1)
+				{
+					System.out.println("Packet is EMPTY ! No more chocolates!!");
+					return false;
+				}
+				else
+				{
+					System.out.println("sugar coated chocolate of color " + box[top--] + " has been taken out");
+					show();
+					return true;
+				}
+			}
+			
+			public void show()
+			{
+				System.out.println();
+				if(top == -1)
+				{
+					System.out.println("Packet is EMPTY ! No chocolates color to display");
+				}
+				else
+				{
+					System.out.print("chocolates remaining in packet are:" +"\t");
+					for(int i = top; i>=0; i--)
+					{
+						System.out.print("Chocolates color " + box[i]+"\t");
+					}
+				}
+			}
+			
+			public static void main(String[] args) 
+			{
+				Stack <String> popins = new Stack <String>();
+				popins.pop();
+				popins.push("red");
+				popins.push("orange");
+				popins.push("yellow");
+				popins.push("green");
+				popins.pop();
+				popins.pop();
+				popins.pop();
+				popins.pop();
+				popins.push("maron");
+				popins.pop();
+			}
+}
+	
+	
+	

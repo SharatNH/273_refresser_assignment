@@ -1,0 +1,5 @@
+package demo.interfaces.demo1;
+
+public interface Dispthread1 {
+
+}

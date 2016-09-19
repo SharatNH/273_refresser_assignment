@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Functions</title>
+</head>
+<body>
+<h1> A Simple example for <i>functions</i></h1>
+<i>
+<p id="base">
+<p id="da">
+<p id="allowance"></p>
+</i>
+
+<script>
+var base = 10000;
+var da = 15.0;
+var allowance = 4000;
+
+document.getElementById("base").innerHTML = "The base salary is : " + base;
+document.getElementById("da").innerHTML = "The da is : " + da;
+document.getElementById("allowance").innerHTML = "The allowances is : " + allowance;
+
+var netsal = netsalary(base,da,allowance);
+
+function netsalary(b,d,a)
+{
+  var result = b+ (d*b) + a ;
+  document.write("Net Salary is : " + result);
+ 
+}
+</script>
+</body>
+</html>
